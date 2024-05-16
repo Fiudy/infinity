@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<style>
+
+    header{
+        width: 200px;
+        height: 200px;
+    }
+    body{
+        height: 100vh;
+        display:flex;
+        flex-wrap: wrap;
+    }
+    div{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        height: 560px;
+        width: 660px;
+        padding: 4%;
+        aspect-ratio: 1/1;
+    }
+    
+    img {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        padding: 100px;
+    }
+    h1{
+        font-size: 2em;
+        display: flex; 
+        align-items: center;
+    }
+    
+    h3{
+        font-size: .6em;
+    }
+    
+    
+    
+    </style>
+<body>
+
+    <header>
+        <ul>
+            
+                <a href="">Men's Clothing</a>
+                <a href="">Jewelery</a>
+                <a href="">Eletronics</a>
+                <a href="">Women's Clothing</a>
+            
+        </ul>
+    </header>
+    
+
+
+
+<script>
+   async function chamarAPI(){
+       await fetch('https://fakestoreapi.com/products')
+    .then(resposta => resposta.json())
+    .then(dados => {
+        // console.log(dados)
+        for(info of dados){
+            // console.log(info.title)
+            let minhadiv = document.createElement('div')
+            let textos = document.createElement('span')
+            let image = document.createElement('img')
+            image.src = info.image
+            let title = document.createElement('h1')
+            title.textContent = info.title
+
+            let description = document.createElement('h3')
+            description.textContent = info.description
+
+            let price = document.createElement('p')
+            price.textContent = info.price
+
+            minhadiv.append(image)
+            textos.append(title, description, price)
+            minhadiv.append(textos)
+            // let body = document.body
+            document.body.append(minhadiv)
+        }
+        })
+    }
+
+    chamarAPI()
+   
+</script>
+</body>
+</html>

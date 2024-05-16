@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <label for="">Nome:</label>
+    <input id="especial" type="text">
+    
+    <label for="">Email:</label>
+    <input id="unico" type="email">
+
+    <label for="">CPF:</label>
+    <input id="cpf" type="number">
+
+    <label for="">Número de Telefone</label>
+    <input id="numero" type="number">
+
+    <button onclick="pegar_informacoes()">Pegar informações</button>
+    <p id="dados"></p> -->
+
+    <script>
+        //pegar o valor que o usuario digitou no primeiro input
+        //pegar o valor que o usuario digitou no segundo input
+
+        //function pegar_informacoes(){
+           // let nome = document.getElementById("especial").value
+           // let email = document.getElementById("unico").value
+           // let cpf = document.getElementById("cpf").value
+           // let numero = document.getElementById("numero").value
+
+
+            //let tag = document.getElementById("dados").innerHTML = `Nome: ${nome}, <br> Email: ${email}, <br> CPF: ${cpf}, <br> Número: ${numero}`
+        //}
+
+        //function pegar_informacoes(){
+            //let nome = document.querySelector('input').value
+
+            //let nome1 = document.querySelector('.minhaclasse').value
+
+           // let nome2 = document.querySelector('#meuId').value
+
+            
+        
+        //}
+
+        let minhaDiv = document.createElement('div')
+        let imagem = document.createElement('img')
+        imagem.src = "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5KsyqEOChSmgAGGqcz7opE/3920505781b0a6aed2f3b74216ef1f72/ACV_KeyArt11__960x540.png"
+
+        let div2 = document.createElement('div')
+        let primeiraTagP = document.createElement('p')
+        let segundaTagP = document.createElement('p')
+        let terceiraTagP = document.createElement('p')
+
+        primeiraTagP.innerHTML = "Teste1"
+        segundaTagP.innerHTML = "Teste2"
+        terceiraTagP.innerHTML = "Teste3"
+
+        minhaDiv.append(imagem, div2)
+        document.body.append(minhaDiv)
+            document.querySelector('input')
+        div2.append(primeiraTagP, segundaTagP, terceiraTagP)
+
+
+        
+    </script>
+    
+</body>
+</html>

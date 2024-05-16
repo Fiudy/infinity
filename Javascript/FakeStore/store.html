@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f3f3;
+            overflow: auto;
+        }
+        
+        #catalogo-produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 70%;
+            margin-top: 20px;
+        }
+        
+        #catalogo-produtos div {
+            width: 300px;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        
+        button {
+            background-color: #480083;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            width: 100%;
+        }
+
+        #catalogo-produtos div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        p {
+            max-height: 100px;
+            overflow: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        #catalogo-produtos div:hover {
+            transform: scale(1.05);
+        }
+        
+        #carrinho {
+            width: 20%;
+            height: 80vh;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            background-color: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2,
+        p {
+            margin: 0 0 10px 0;
+        }
+        
+        img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+        
+        button:hover {
+            background-color: #04acb8;
+        }
+        
+        #total-carrinho {
+            margin-top: 50px;
+            padding: 10px;
+            color: #480083;
+            transition: color 0.3s ease;
+            padding-left: 2rem;
+        }
+        
+        #total-carrinho h2:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="catalogo-produtos"></div>
+    <div id="carrinho">
+        <h2>Carrinho</h2>
+    </div>
+    <div id="total-carrinho">
+        <h2>Valor Total: R$ 0</h2>
+    </div>
+
+    <!-- <img src="trash-can.png" alt=""> -->
+
+    <script>
+        let total = 0;
+
+        const lixo = document.createElement("img")
+        lixo.src = "trash-can.png"
+
+        
+
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(produtos => {
+                const catalogo = document.getElementById('catalogo-produtos');
+                produtos.forEach(produto => {
+                    const produtoElemento = document.createElement('div');
+                    
+                    
+            
+                    const button = document.createElement('button');
+                    button.onclick = () => adicionarAoCarrinho(produto.title, produto.price, lixo);
+
+                    
+                    const icon = document.createElement('span');
+                    icon.className = 'pi pi-cart-plus';
+
+                
+                     
+
+                    button.appendChild(icon);
+                    button.appendChild(document.createTextNode(' Adicionar'));
+
+                    produtoElemento.innerHTML = `
+                        <h2>${produto.title}</h2>
+                        <img src="${produto.image}" alt="${produto.title}">
+                        <p>${produto.description}</p>
+                        <p>R$ ${produto.price}</p>
+                    `;
+                    produtoElemento.appendChild(button);
+                    catalogo.appendChild(produtoElemento);
+                });
+            });
+
+            
+
+        let totalCarrinho = 0;
+
+        function adicionarAoCarrinho(produto, preco) {
+            const carrinho = document.getElementById('carrinho');
+            const item = document.createElement('p');
+            item.textContent = `${produto} - R$ ${preco}`;
+            carrinho.append(item, lixo);
+
+            totalCarrinho += preco;
+
+            const totalElemento = document.querySelector('#total-carrinho h2');
+            totalElemento.textContent = `Valor Total: R$ ${totalCarrinho.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>

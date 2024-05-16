@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        #botaoAzul {
+            background-color: blue;
+        }
+
+        #botaoVermelho {
+            background-color: red;
+        }
+
+        #botaoAmarelo {
+            background-color: yellow;
+        }
+
+    </style>
+    <button id="botaoAzul">Azul</button>
+    <button id="botaoVermelho">Vermelho</button>
+    <button id="botaoAmarelo">Amarelo</button>
+
+    <script>
+
+       
+
+        let btn_azul = document.getElementById("botaoAzul")
+        let btn_vermelho = document.getElementById("botaoVermelho")
+        let btn_amarelo = document.getElementById("botaoAmarelo")
+
+        function azul (){
+            document.body.style.backgroundColor = "Blue"
+
+        }
+
+        function vermelho (){
+            document.body.style.backgroundColor = "Red"
+
+        }
+
+        function amarelo (){
+            document.body.style.backgroundColor = "Yellow"
+
+        }
+
+        btn_amarelo.addEventListener("click", amarelo)
+        btn_vermelho.addEventListener("click", vermelho)
+        btn_azul.addEventListener("click", azul)
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//let count = 0
+//function contadorvogais(){
+  // let palavra = prompt("Digite uma palavra: ")
+   //for(letra of palavra) {
+    //console.log(letra)
+     // if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
+      //   count += 1
+   //}
+   //alert(`O números de vogais é: ${count}`)
+  
+//}
+
+//contadorvogais()
+
+//function quadrado (){
+   // let numero = prompt("Digite um número: ")
+    //let resultado = alert(numero * numero)
+   // return resultado
+ //}
+ //quadrado()
+
+ //function calcular (){
+    //let raio = prompt("Informe o raio: ")
+   // let Calculo_area = Math.PI * (raio * 2)
+    //alert(Calculo_area);
+// }
+ //calcular()
+
+ //function Verificador (){
+   // let numero = prompt("Digite um número: ")
+   // let verificar = 0 
+   // for (let i = 1; i <= numero ; i++){
+      //  console.log(i)
+     //   if(numero == i){
+       //     alert(`Esse número ${numero} é primo`)
+       //     break
+       // }
+            
+
+      //  if (numero > 0 && i > 1 && numero % i == 0 ){
+       //     alert(`Esse número ${numero} não é primo`)
+       //     break
+      //  }
+      //      
+
+            
+  //  }
+
+// }
+// Verificador()
+
+function Calculadora (){
+    while (true){
+        let numero1 = prompt("Digite um número: ")
+        let numero2 = prompt("Digite o segundo número: ")
+        let operacao = prompt("Escolha a operação: /n [1]- Adição  /n [2]- Subtração /n [3]- Multiplicação /n [4]- Divisão /n [5]- Sair")
+        
+        if(operacao == '1'){
+            return numero1 + numero2
+        }
+        if(operacao == '2'){
+            return numero1 - numero2
+        }
+        if(operacao == '3'){
+            return numero1 * numero2
+        }
+        if(operacao == '4'){
+            return numero1/numero2
+        }
+        if (operacao == '5'){
+            break
+        }
+        else{
+            alert("Algo deu errado")
+        }
+    }
+    
+    
+
+}
+Calculadora()
+
+ 
+    </script>
+</body>
+</html>

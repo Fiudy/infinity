@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  type="text" id="entrada">
+    <button id="botao"> Aperte</button>
+
+
+    <script>
+
+         // let minhaTagP = document.createElement('p')
+        //minhaTagP.innerHTML = "Sou uma tag p adicionada dinamicamente"
+        //minhaTagP.style.color = "blue"
+        //document.body.append(minhaTagP)
+        let Minhaul = document.createElement('ul')
+
+            function teste(){
+                let valorinput = document.getElementById("entrada").value
+                let minhali = document.createElement('li')
+
+                minhali.innerHTML = valorinput
+                Minhaul.append(minhali)
+                document.body.append(Minhaul)
+            }
+            let meuButton = document.getElementById("botao")
+            botao.addEventListener('click', teste)
+           
+            
+
+
+            //let botao = document.getElementById("meu_btn")
+            //function btn(){
+                    //console.log("pegou")
+            ///}
+
+            
+    </script>
+</body>
+</html>

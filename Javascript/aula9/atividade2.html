@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Aperte</button>
+
+    <script>
+
+        btn.addEventListener('click', apertar)
+        function apertar (btn) {
+           
+            let paragrafo = document.createElement("p")
+            paragrafo.innerHTML = "FLAMENGO"
+          
+            paragrafo.style.backgroundColor = "Red"
+            document.body.append(paragrafo)
+        }
+
+       
+            
+    </script>
+</body>
+</html>

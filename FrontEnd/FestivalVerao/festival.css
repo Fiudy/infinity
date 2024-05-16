@@ -1,0 +1,29 @@
+
+* {
+    /* zerando a estilização do navegador */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.banner {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1MluUcWWj7eTHMS0b1Ul1MZt4uOTGvWfb_el1khbAW9rOLm0EheuyQSbKzn5SQh4YNQ&usqp=CAU");
+    height: 200px;
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    
+        }
+
+        .comprar-ingresso {
+            text-decoration: none;
+            background-color: rgb(172, 30, 106);
+            padding: 5px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+ 
+
+   

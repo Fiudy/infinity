@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <!-- <form action="" method=""> -->
+    <form>
+        <div>
+            <label for="nome">Nome</label>
+            <input 
+            id="nome" 
+            type="text" 
+            placeholder="Digite seu nome"
+            required
+            minlength="10"
+            maxlength="12"
+            readonly
+            />
+        </div>
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" placeholder="Digite sua idade" />  
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="Digite sua senha" />
+        </div>
+       <div>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Digite seu email" />
+       </div>
+    </form>
+    <div>
+        <h4>Curso</h4>
+        <label>
+            Dev Full Stack
+            <input type="radio" name="Curso" />
+        </label>
+        <label>
+            Design
+            <input type="radio" name="Curso"/>
+        </label>
+        <label>
+            Marketing
+            <input type="radio" name="Curso" />
+        </label>
+       </div>
+       <div>
+        <h4>Farda</h4>
+        <label>
+            Camisa
+            <input type="checkbox" name="farda" />
+        </label>
+        <label>
+            Regata
+            <input type="checkbox" name="farda" />
+        </label>
+    </div>
+    <label>
+        Módulo
+        <select>
+            <option value="">Selecione</option>
+            <option value="html-css">HTML / CSS</option>
+            <option value="js">Javascript</option>
+            <option value="python">Python</option>
+        </select>
+    </label>
+    <div>
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes"></textarea>
+    </div>
+
+        <input type="reset" />
+        <button type="button">Submeter</button>
+</form>
+<button onclick="exibirAlerta()">Enviar</button>
+</body>
+<script>
+function exibirAlerta() {
+    alert("Formulário enviado com sucesso!");
+}
+</script>
+</html>
+
+<style>
+    body {
+        background-color: rgb(145, 211, 238);
+        text-align: center;
+        gap: 10px;
+    }
+
+</style>

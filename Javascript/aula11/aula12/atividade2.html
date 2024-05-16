@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="mostrar"></p>
+
+    <script>
+        const listaEstudantes = [{
+            nome: 'Guilherme Carvalho',
+            idade: 22,
+            id: 123456,
+            Materia: [{'Portugues': 5.6, 'Matematica:': 7.8}]},
+
+           { nome: 'Nathalia Rommanel',
+            idade: 22,
+            id: 654321,
+            Materia: [{'Portugues': 8.6, 'Matematica:': 2.8}]}
+        ]
+
+       const novosEstudantes = [
+           { nome: 'Joao Pedro',
+            idade: 20,
+            id: 222333,
+            Materia: [{'Portugues': 9.0, 'Matematica:': 5.8}]},
+       ]
+            
+       let idAdicionar = parseInt(prompt("Digite o ID do aluno que deseja adicionar: "))
+       listaEstudantes.push(novosEstudantes)
+        let converterEstudantes = JSON.stringify(listaEstudantes)
+
+        let idRemover = parseInt(prompt("Digite o ID do Aluno que deseja remover: "))
+        listaEstudantes.pop(idRemover)
+
+        let idAtualizar = prompt("Atualizar a nota de todos os estudantes? [S/N]").toUpperCase()
+        if (idAtualizar == 'S') {
+            let listaMateria = prompt("1- Portugues \br 2- Matematica")
+            if (listaMateria == '1') {
+              listaEstudantes.forEach((estudente)=>{
+                let teste = estudente.Materia[0].Portugues = 9.5;
+                console.log(listaEstudantes); 
+              })
+              console.log(listaMateria);
+            }
+        
+            
+            
+        }
+
+       
+
+      
+
+
+    </script>
+</body>
+</html>

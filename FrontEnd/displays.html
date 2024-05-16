@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 10px;
+        }
+
+        img {
+            width: 10%;
+            vertical-align: middle;
+        }
+
+        nav, ul {
+            display: inline-block;
+        }
+
+        nav {
+            width: 89%;
+            /* como o nav e o ul estão como display inline-block, as propriedades
+            funcionam como texto, então da para alinhar com o text-align */
+            text-align: end;
+
+            /* uma propriedade para indicar o elemento verticalmente em 
+            relação ao container */
+            vertical-align: middle;
+        }
+
+        li {
+            /* display inline: elementos funcionam em linha e não possuem a 
+            possibilidade de altura e largura */
+            /* display inline-block: posiciona os elementos horizontalmente 
+            mas libera altura e largura */
+            /* display-block: os elementos funcionam em formato de bloco */
+            /* display none: os elementos não são mostrados em tela */
+            /* visibility hidden: os elementos são mostrados na tela mas de forma
+            invisível */
+            display: inline-block;
+            background-color: brown;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://logosmarcas.net/wp-content/uploads/2020/04/Amazon-Logo-2000-.....jpg" />
+        
+        <nav>
+            <ul>
+                <li>Teste</li>
+                <li>Teste</li>
+                <li>Teste</li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- 
+    <a href="#">teste</a>
+    <a href="#">teste</a>
+    <a href="#">teste</a> -->
+</body>
+</html>

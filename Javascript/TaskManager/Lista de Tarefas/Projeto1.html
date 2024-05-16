@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+            background-size: cover;
+            -webkit-animation: slidein 100s;
+            animation: slidein 100s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        
+        @-webkit-keyframes slidein {
+            from {
+                background-position: top;
+                background-size: 3000px;
+            }
+            to {
+                background-position: -100px 0px;
+                background-size: 2750px;
+            }
+        }
+        
+        @keyframes slidein {
+            from {
+                background-position: top;
+                background-size: 3000px;
+            }
+            to {
+                background-position: -100px 0px;
+                background-size: 2750px;
+            }
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #a259f5;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #a259f5;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        li input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        li button {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        li button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <input type="text" id="taskInput" placeholder="Adicionar nova tarefa">
+        <button onclick="adicionarTarefa()">Adicionar</button>
+        <ul id="listaTarefas">
+            
+
+        </ul>
+    </div>
+
+    <script>
+        function adicionarTarefa() {
+            const entradaTarefa = document.getElementById("taskInput");
+            const textoTarefa = entradaTarefa.value.trim();
+            if (textoTarefa !== "") {
+                const listaTarefas = document.getElementById("listaTarefas");
+                const novaTarefa = document.createElement("li");
+                novaTarefa.innerHTML = `
+          <input type="checkbox" onchange="alternarTarefa(this)">
+          <span>${textoTarefa}</span>
+          <button onclick="removerTarefa(this)">Remover</button>
+        `;
+                listaTarefas.appendChild(novaTarefa);
+                entradaTarefa.value = "";
+            }
+        }
+
+        function removerTarefa(botao) {
+            const itemTarefa = botao.parentNode;
+            itemTarefa.parentNode.removeChild(itemTarefa);
+        }
+
+        function alternarTarefa(checkbox) {
+            const textoTarefa = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                textoTarefa.style.textDecoration = "line-through";
+            } else {
+                textoTarefa.style.textDecoration = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

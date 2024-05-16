@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+
+    <table border="1"> <!-- cria uma tabela -->
+        <!-- Dá nome à tabela -->
+        <caption>Cardápio</caption>
+        <thead>
+            <tr> <!-- cria uma linha da tabela -->
+                <th>Nome</th> <!-- criar uma célula de um titulo -->
+                <th>Descrição</th>
+                <th>Imagem</th>
+                <th colspan="3">Preço</th>
+            <!-- colspan expansiona a celula para ocupar mais de uma coluna -->
+            </tr>
+    </thead>
+    <tr>
+        <td>Calabresa</td>
+        <td>Pizza com Calabresa</td>
+        <td> <img src="https://blog.biglar.com.br/wp-content/uploads/2023/06/iStock-1212512019.jpg" width="100px"> 
+      
+        </td> 
+        <td>R$ 25,00</td>
+        <td>R$ 35,00</td>       
+        <td>R$ 45,00</td>
+    </tr>
+    <tr>
+        <td>Portuguesa</td> 
+        <td>Pizza com presunto, ovos, muçarela e ervilha</td>
+        <td> <img src="https://img.cybercook.com.br/receitas/819/pizza-a-portuguesa-1.jpeg" width="100px"> 
+        <td>R$ 35,00</td>
+        <td>R$ 45,00</td>       
+        <td>R$ 60,00</td>
+    </tr>
+    <tr>
+        <td>Atum</td>
+        <td>Pizza com Atum e Cebola</td>
+        <td> <img src="https://gomesdacosta.com.br/wp-content/uploads/2017/04/pizza-de-atum-defumado-alho-poro-e-parmesao-mobile.jpg" width="100px"> 
+        <td>R$ 25,00</td>
+        <td>R$ 35,00</td>       
+        <td>R$ 50,00</td>
+    </tr>
+
+    <style>
+        table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        text-align: center;
+        padding: 8px;
+      }
+      
+      tr:nth-child(odd) {background-color: #f2f2f2;}
+      
+      tr:hover {background-color: rgb(205, 209, 164);}
+      
+      th {
+          background-color: #db8e0a;
+      }
+
+      button {
+    background:#db8e0a;
+    color: rgb(10, 10, 10);
+    border-style: outset;
+    border-color: #db8e0a;
+    height: 40px;
+    width: 100px;
+    text-shadow: none;
+    border-radius: 20%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+}
+      </style>
+          <button onclick="mostrarPedido()">Fazer Pedido</button>
+
+    </body>
+</html>

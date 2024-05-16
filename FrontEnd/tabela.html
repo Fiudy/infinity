@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+    <!-- alt + shift + seta cima e baixo copia a linha -->
+    <!-- alt + seta cima e baixo anda a linha -->
+
+    <table border="1"> <!-- cria uma tabela -->
+        <!-- Dá nome à tabela -->
+        <caption>Lista de funcionários - Infinity</caption>
+        <thead>
+            <tr> <!-- cria uma linha da tabela -->
+                <th>Nome</th> <!-- criar uma célula de um titulo -->
+                <th>Cargo</th>
+            <!-- colspan expansiona a celula para ocupar mais de uma coluna -->
+                <th colspan="2">Telefone</th>
+            </tr>
+    </thead>
+        <tr>
+            <td>Guilherme</td> <!-- cria uma célula de dados da tabela -->
+            <td>Aluno</td>
+            <td>(71) 98777-8382</td>
+            <td>(71) 98777-8382</td>
+        </tr>
+        <tr>
+            <td>Belligham</td>
+            <td>Coordenador</td>
+            <td>(71) 98777-8382</td>
+            <td>(71) 98777-8382</td>
+        </tr>
+        <tr>
+            <td>Fernanda</td>
+            <td>Professora</td>
+            <td>(71) 94873-4946</td>
+            <td>(71) 94873-4946</td>
+        </tr>
+    </table>
+    
+</body>
+<style>
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+tr:hover {background-color: rgb(80, 144, 255);}
+
+th {
+    background-color: rgb(138, 188, 238);
+}
+</style>
+</html>

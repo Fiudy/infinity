@@ -1,0 +1,74 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    gap: 200px;
+    margin-top: 50px;
+}
+
+.Menu_Navegacao ul {
+    color: #000000;
+}
+
+.imagem-container {
+    display: block;
+}
+
+.Compre {
+    position: relative;
+}
+
+.Compre a {
+    position: absolute;
+    color: white;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115%;
+    right: 47%;
+    top: 20%;
+}
+
+.container {
+    position: relative;
+}
+
+.tenis-image {
+    position: absolute;
+    right: 4%;
+    bottom: 17%;
+    width: 800px;
+}
+
+.fundo-tenis {
+    width: 800px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

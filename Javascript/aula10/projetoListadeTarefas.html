@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     
+    }
+    div{
+        width: 50%;
+        background-color: blueviolet;
+        padding: 0.6rem;
+        border-radius: 10px;
+    }
+    input:checked{
+        background-color: blue;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center ;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: white;
+    }
+   </style>
+    
+    <input type="text" placeholder="Digite aqui sua tarefa: " id="adicionar">
+    <button id="btn" onclick="adicionar_Tarefa()">Adicionar Tarefa</button>
+    
+    <div class="container">
+
+   
+
+    </div>
+
+
+    <script>
+
+        function adicionar_Tarefa(){
+            let tarefa = document.getElementById("adicionar").value
+            let input = document.createElement("input")
+            input.type="checkbox"
+            let div = document.createElement("div")
+            let span = document.createElement('span')
+            span.innerHTML = tarefa
+
+            div.append(input,span)
+           let div_container = document.querySelector('.container')
+           div_container.append(div)
+           document.body.append(div_container)
+
+
+
+    
+        
+
+        }
+
+        
+
+    
+       
+           
+
+     
+    </script>
+</body>
+</html>
